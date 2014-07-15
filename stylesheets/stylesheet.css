@@ -1082,9 +1082,13 @@ Responsive Syling
         width: 100%;
     }
     .small {
-    clear: left;
-    display: table;
-    margin-top: 20px;
-    position: relative;
+      clear: left;
+      display: table;
+      margin-top: 20px;
+      position: relative;
     }
+}
+
+img#me{
+  border: solid 10px #022F0E;
 }
