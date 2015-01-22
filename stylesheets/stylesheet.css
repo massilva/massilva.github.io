@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body, html {
-  background: url('../images/bg.jpg');
+  background: url('../images/bg2.png');
   background-repeat:no-repeat;
   background-size:100% 110%;
     font-family: 'Raleway', sans-serif;
@@ -1090,5 +1090,5 @@ Responsive Syling
 }
 
 img#me{
-  border: solid 10px #022F0E;
+  border: solid 10px;
 }
