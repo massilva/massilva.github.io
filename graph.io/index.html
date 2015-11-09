@@ -4,16 +4,25 @@
     <meta charset="utf-8">
     <title>Labeled Directed Graph Editor</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/app.css">
-    </head>
-    <body>
-        <h1>Graph.io</h1>
-        <section id="subject">This editor allow that the user conect the dots and put yourself interpretation.</section>
-        <section id="board"></section>
-    </body>
     <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="../javascripts/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
+    </head>
+    <body>
+        <section id="header">
+            <h1>Graph.io</h1>
+            <div id="subject">This editor allow that the user conect the dots and put yourself interpretation.</div>
+        </section>        
+        <section class="content">
+            <section id="board"></section>
+            <section id="information">
+                <h3>Information</h3>
+            </section>
+        </section>
+    </body>
 </html>
