@@ -11,6 +11,7 @@
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="../javascripts/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/SimpleGraph.js"></script>
     <script src="js/app.js"></script>
     </head>
     <body>
@@ -21,7 +22,44 @@
         <section class="content">
             <section id="board"></section>
             <section id="information">
-                <h3>Information</h3>
+                <section id="option">
+                    <header>
+                        <h3>Options</h3>
+                    </header>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                Vertex is labeled ?
+                                <label>
+                                    <input id="vertexLabeled" type="radio" name="vertexlabeled" value="1" checked> True
+                                </label>
+                                <label>
+                                    <input id="vertexLabeled" type="radio" name="vertexlabeled" value="0"> False
+                                </label>
+                            </li>
+                            <li>
+                                Edges is labeled ?
+                                <label>
+                                    <input id="edgeLabeled" type="radio" name="labeled" value="1" checked> True
+                                </label>
+                                <label>
+                                    <input id="edgeLabeled" type="radio" name="labeled" value="0"> False
+                                </label>
+                            </li>
+                        </ul>
+                    </div>                    
+                </section>
+                <section id="legend">
+                    <header>
+                        <h3>Legend</h3>
+                    </header>
+                    <div class="content">
+                        <ul>
+                            <li><b>Click</b> Add vertex or edges</li>
+                            <li><b>Click</b> Add vertex or edges</li>
+                        </ul>
+                    </div>                    
+                </section>
             </section>
         </section>
     </body>
