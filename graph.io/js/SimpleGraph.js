@@ -1,4 +1,4 @@
-var SimpleGraph = function(window, content_id, width, height, edgeIsLabeled, vertexIsLabeled){
+var SimpleGraph = function(window, content_id, width, height, uForm){
 
     var _public = {};
     var _private = {};
@@ -161,7 +161,7 @@ var SimpleGraph = function(window, content_id, width, height, edgeIsLabeled, ver
                 if(link) {
                     link[direction] = true;
                 } else {
-                    edgeIsLabeled = $("#edgeLabeled").is(":checked");
+                    var edgeIsLabeled = uForm.edgelabeled == '1';
                     var label = " ";
                     if(edgeIsLabeled){
                         label = prompt("Put the edge label","");
@@ -216,7 +216,7 @@ var SimpleGraph = function(window, content_id, width, height, edgeIsLabeled, ver
             .style("pointer-events", "none")
             .attr({ 'class':'edgelabel',
                     'id':function(d,i){return 'edgelabel'+i},
-                    'dx':55,
+                    'dx':65,
                     'dy':15,
                     'font-size':10,
                     'fill':'#F90'});
@@ -243,7 +243,8 @@ var SimpleGraph = function(window, content_id, width, height, edgeIsLabeled, ver
         if(d3.event.ctrlKey || _private.mouseEvent.mousedown_node || _private.mouseEvent.mousedown_link) return;
 
         // insert new node at point
-        vertexIsLabeled = $("#vertexLabeled").is(":checked");
+        console.log(uForm);
+        var vertexIsLabeled = uForm.vertexlabeled == '1';
         var label = "";
         if(vertexIsLabeled){
             label = prompt("Put the vertex label","");
