@@ -16,10 +16,23 @@
     <script src="js/app.js"></script>
     </head>
     <body>
-        <section id="header">
-            <h1>Graph.io</h1>
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Graph.io</a>
+              <a id="use_example" class="navbar-brand" href="#" data-toggle="modal" data-target="#exampleModal">Use Example</a>
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+        <header>
             <div id="subject">This editor allow that the user conect the dots and put yourself interpretation.</div>
-        </section>        
+        </header>    
         <section class="content">
             <section id="board"></section>
             <section id="information">
@@ -63,12 +76,34 @@
                             <li><b>Add node: </b> Click the the editor area.</li>
                             <li><b>Add edges: </b> Click the source node and drag until target node.</li>
                             <li><b>Drag node: </b> Press key 'Ctrl' + cLick and press node and drag it.</li>
-                            <li><b>Remove node: </b> CLick the node and press key 'delete'.</li>
-                            <li><b>Remove edge: </b> CLick the edge and press key 'delete'.</li>
+                            <li><b>Remove node: </b> Click the node and press key 'delete'.</li>
+                            <li><b>Remove edge: </b> Click the edge and press key 'delete'.</li>
                         </ul>
                     </div>                    
                 </section>
             </section>
         </section>
+        <article>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Use Example</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img width="400" height="250" src="images/use-example1.png" alt="Use example 1">
+                            <div class="description">
+                                [...]
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
     </body>
 </html>

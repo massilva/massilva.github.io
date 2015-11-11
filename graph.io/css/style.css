@@ -2,6 +2,7 @@ section.content{
 	display: flex;
 }
 
+header,
 section#header,
 section.content{
 	padding: 10px;
