@@ -145,13 +145,13 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                 // NB: links are strictly source < target; arrows separately specified by booleans
                 var source, target, direction;
                 if(_private.mouseEvent.mousedown_node.id > _private.mouseEvent.mouseup_node.id) {
-                    source = _private.mouseEvent.mousedown_node;
-                    target = _private.mouseEvent.mouseup_node;
-                    direction = 'right';
-                } else {
                     source = _private.mouseEvent.mouseup_node;
                     target = _private.mouseEvent.mousedown_node;
                     direction = 'left';
+                } else {
+                    source = _private.mouseEvent.mousedown_node;
+                    target = _private.mouseEvent.mouseup_node;
+                    direction = 'right';
                 }
 
                 var link = _private.links.filter(function(l) {
@@ -173,6 +173,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                     _private.restart();
                 }
 
+                console.log(_private.links);
                 // select new link
                 _private.mouseEvent.selected_link = link;
                 _private.mouseEvent.selected_node = null;
@@ -208,7 +209,6 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
             .style("pointer-events", "none");
 
         _private.edgepaths.push(ePaths);
-
         var eLabels = _private.svg.selectAll(".edgelabel")
             .data(_private.links)
             .enter()
@@ -243,7 +243,6 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
         if(d3.event.ctrlKey || _private.mouseEvent.mousedown_node || _private.mouseEvent.mousedown_link) return;
 
         // insert new node at point
-        console.log(uForm);
         var vertexIsLabeled = uForm.vertexlabeled == '1';
         var label = "";
         if(vertexIsLabeled){
@@ -251,7 +250,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
         }
         label = label || _private.lastIdx;
         var point = d3.mouse(this);
-        var node = {id: ++_private.lastIdx, name: label, reflexive: true, x: point[0], y: point[1]};
+        var node = {id: _private.lastIdx++, name: label, reflexive: true, x: point[0], y: point[1]};
 
         _private.nodes.push(node);
         _private.restart();
