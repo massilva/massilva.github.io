@@ -89,15 +89,15 @@ var Algorithm = function(){
      * Algorithm Dijkstra
      * @param  {Array of objects} links  | Array of nodes with links between nodes
      * @param  {init} posInitNode        | Initial node
-     * @param  {boolean} comparator      | Flag when TRUE : minimal cost FALSE : maximal cost
+     * @param  {boolean} isShortestPath  | Flag when TRUE : minimal cost FALSE : maximal cost
      * @param  {int} countVertex         | The amount nodes or vertex 
-     * @return {Array}                   | Distances (min or max, comparator flag dependecy) of the initial node until all node
+     * @return {Array}                   | Distances (min or max, isShortestPath flag dependecy) of the initial node until all node
      */
-    _public.dijkstra = function(links, posInitNode, comparator, countVertex){
+    _private.dijkstra = function(links, posInitNode, isShortestPath, countVertex){
         var distances = []; //array 
         var linksArr = [];
         var queue = [];
-        var minDistance = comparator && true;
+        var minDistance = isShortestPath && true;
         var limit = minDistance ? Infinity : -1;
         //Construct the array of distances until vertex.
         //Each position of the array distance is equal the vertex, 
@@ -132,6 +132,15 @@ var Algorithm = function(){
         }
         return distances;
     };
+
+    _public.shortestPath = function(nodes, links, posInitNode){
+        return _private.dijkstra(links, 0, true, nodes.length);
+    }
+
+    _public.longestPath = function(nodes, links, posInitNode){
+        return _private.dijkstra(links, 0, false, nodes.length);
+    }
+
     /**
      * Test Algorithms
      **/
@@ -193,11 +202,11 @@ var Algorithm = function(){
                     ];
 
         var minD = [0, 5, 5, 5, 5, 25, 20, 30, 45];
-        var distances = algorithm.dijkstra(links, 0, true, nodes.length);
+        var distances = algorithm.shortestPath(nodes, links, 0);
         _private.showAssert(minD,distances,_private.isEqualsInOrder(minD,distances));
 
         var maxD = [0, 5, 5, 5, 5, 25, 30, 40, 55];
-        distances = algorithm.dijkstra(links, 0, false, nodes.length);
+        distances = algorithm.longestPath(nodes, links, 0);
         _private.showAssert(minD,distances,_private.isEqualsInOrder(maxD,distances));
 
     }
