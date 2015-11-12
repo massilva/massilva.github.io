@@ -3,6 +3,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
     var _public = {};
     var _private = {};
 
+    _private.options = {r: 12};
     _private.window = window;
     _private.colors = d3.scale.category10();
     _private.lastIdx = 0;
@@ -33,7 +34,10 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
         });
 
         _private.circle.attr('transform', function(d) {
-            return 'translate(' + d.x + ',' + d.y + ')';
+            var st = 3;
+            var dx = d.x < 0 ? _private.options.r + st : d.x + _private.options.r >= width ? width - _private.options.r - st : d.x;
+            var dy = d.y < 0 ? _private.options.r + st : d.y + _private.options.r >= height ? height - _private.options.r - st : d.y;
+            return 'translate(' + dx + ',' + dy + ')';
         });
 
         for(var i = _private.edgepaths.length - 1; i >= 0; i--){
@@ -101,7 +105,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
 
         g.append('svg:circle')
             .attr('class', 'node')
-            .attr('r', 12)
+            .attr('r', _private.options.r)
             .style('fill', function(d) { return (d === _private.mouseEvent.selected_node) ? d3.rgb(_private.colors(d.id)).brighter().toString() : _private.colors(d.id); })
             .style('stroke', function(d) { return d3.rgb(_private.colors(d.id)).darker().toString(); })
             .classed('reflexive', function(d) { return d.reflexive; })
@@ -164,7 +168,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                     var edgeIsLabeled = uForm.edgelabeled == '1';
                     var label = " ";
                     if(edgeIsLabeled){
-                        label = prompt("Put the edge label","");
+                        label = prompt("Set the edge label","");
                     }
                     link = {source: source, target: target, left: false, right: false, value: _private.isNumeric(label) ? parseFloat(label) : label};
                     link[direction] = true;
@@ -246,9 +250,9 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
         var vertexIsLabeled = uForm.vertexlabeled == '1';
         var label = "";
         if(vertexIsLabeled){
-            label = prompt("Put the vertex label","");
+            label = prompt("Set the vertex label","");
         }
-        label = label || _private.lastIdx;
+        label = label || _private.lastIdx + 1;
         var point = d3.mouse(this);
         var node = {id: _private.lastIdx++, name: label, reflexive: true, x: point[0], y: point[1]};
 

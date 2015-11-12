@@ -1,32 +1,140 @@
-section.content{
+body{
+	font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.site{
+	background: #444;
+}
+
+.content{
 	display: flex;
 }
 
 header,
-section#header,
-section.content{
+#header,
+.content{
 	padding: 10px;
 	width: 100%;
 }
 
-section#board{
-	width: 69%;
+#board{
+	padding: 0px;
+	/*width: 69%;*/
 	margin-right: 1%;
+	height: 100%;
 }
 
-section#information{
-	width: 30%;
+.information{
+	/*width: 30%;*/
 	padding: 5px;
+	height: 100%;
 }
 
-section#information h3{
+.information h3{
 	margin: 0;
 }
 
-section#board, section#information{
+#board, .information{
     border: 1px solid #333;
 }
 
-section#information header{
+.information header{
 	margin-bottom: 10px;
+}
+
+#header-site{
+	padding-top: 20px;
+    min-height: 450px;
+    background-color: #18bc9c;
+}
+
+#slogan-header-site, #legend-slogan{
+    text-align: center;
+    color: white;
+}
+
+#slogan-header-site{
+    font-size: 40pt;
+}
+
+#legend-slogan{
+	font-size: 16pt;
+}
+
+hr.connect{
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+hr.connect:after{
+    content: "\f20e";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.connect {
+    border-color: #fff;
+}
+
+hr.connect:after {
+    color: #fff;
+    background-color: #18bc9c;
+}
+
+.card{
+	background: #fff;
+	padding: 20px;
+	text-align: justify;
+    box-shadow: 2px 2px 10px #111;
+}
+
+.card,
+.card > img{
+	width: 100%;
+	margin: 0px;
+}
+
+.card .title{
+	font-size: 14pt;
+	color: #333;
+	border-bottom: 1px solid #eee;
+}
+
+.card .footer.separator{
+	padding-top: 1px;
+}
+
+.samples .col-xs-6:first-child,
+.samples .col-md-4:first-child{
+	padding-left: 0px;
+}
+
+.samples .col-xs-6:last-child,
+.samples .col-md-4:last-child{
+	padding-right: 0px;
+}
+
+.no-margin{
+	margin: 0 !important;
+}
+
+.info-color{
+	color: blue;
+}
+
+.row{
+	width: 100%;
+	height: 100%;
+}
+
+.h100{
+	height: 100%;
 }

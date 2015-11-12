@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Graph.io Editor</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -16,94 +17,107 @@
     <script src="js/app.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-static-top">
+        <nav id="nav" class="navbar-inverse navbar-static-top">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
               <a class="navbar-brand" href="#">Graph.io</a>
-              <a id="use_example" class="navbar-brand" href="#" data-toggle="modal" data-target="#exampleModal">Use Example</a>
             </div>
           </div><!-- /.container-fluid -->
         </nav>
-        <header>
-            <div id="subject">This editor allow that the user conect the dots and put yourself interpretation.</div>
-        </header>    
-        <section class="content">
-            <section id="board"></section>
-            <section id="information">
-                <section id="option">
-                    <header>
-                        <h3>Options</h3>
-                    </header>
-                    <div class="content">
-                        <ul id="form">
-                            <li>
-                                <div id="minValue"></div>
-                                <div id="maxValue"></div>
-                            </li>
-                            <li>
-                                Vertex is labeled ?
-                                <label>
-                                    <input id="vertexLabeled_true" type="radio" name="vertexlabeled" value="1" checked> True
-                                </label>
-                                <label>
-                                    <input id="vertexLabeled_false" type="radio" name="vertexlabeled" value="0"> False
-                                </label>
-                            </li>
-                            <li>
-                                Edges is labeled ?
-                                <label>
-                                    <input id="edgeLabeled_true" type="radio" name="edgelabeled" value="1" checked > True
-                                </label>
-                                <label>
-                                    <input id="edgeLabeled_false" type="radio" name="edgelabeled" value="0"> False
-                                </label>
-                            </li>
-                        </ul>
-                    </div>                    
-                </section>
-                <section id="legend">
-                    <header>
-                        <h3>Info</h3>
-                    </header>
-                    <div class="content">
-                        <ul>
-                            <li><b>Add node: </b> Click the the editor area.</li>
-                            <li><b>Add edges: </b> Click the source node and drag until target node.</li>
-                            <li><b>Drag node: </b> Press key 'Ctrl' + cLick and press node and drag it.</li>
-                            <li><b>Remove node: </b> Click the node and press key 'delete'.</li>
-                            <li><b>Remove edge: </b> Click the edge and press key 'delete'.</li>
-                        </ul>
-                    </div>                    
-                </section>
-            </section>
-        </section>
-        <article>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Use Example</h4>
-                        </div>
-                        <div class="modal-body">
-                            <img width="400" height="250" src="images/use-example1.png" alt="Use example 1">
-                            <div class="description">
-                                [...]
+        <section class="site">
+            <header id="header-site">
+                <div class="description_header">
+                    <div id="slogan-header-site">Make feel yourself confortable to conect the dots.</div>
+                    <div id="legend-slogan">Graph.io provides the tools and you put your creativity and interpretation.</div>
+                </div>
+                <hr class="connect">
+                <div class="no-margin samples row">
+                      <div class="col-xs-6 col-md-4">
+                        <div class="card">
+                            <div class="title separator">Project Management - PERT</div>
+                            <img height="220" src="images/use-example1.png" alt="Use example 1">
+                            <div class="footer separator">
+                                <strong>Program evaluation and review technique</strong> was designed to analyze and represent the tasks involved in completing a given project.
+                                It is commonly used in conjunction with the critical path method (CPM).<br/> 
+                                <i class="fa fa-exclamation-circle info-color"></i> 
+                                The option "<strong><i>Show maximum and minimum values</i></strong>" will help you to see the CPM.
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <div class="card">
+                            <div class="title">[title]</div>
+                            <img height="250" src="images/use-example1.png" alt="Use example 1">
+                            <div class="description">[description]</div>
                         </div>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <div class="card">
+                            <div class="title">[title]</div>
+                            <img height="250" src="images/use-example1.png" alt="Use example 1">
+                            <div class="description">[description]</div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </header>
+            <div class="container content full-screen">
+                <div class="row h100">
+                    <div class="h100 col-xs-6 col-md-8">
+                        <section id="board" class="h100 card">
+                        </section>
+                    </div>
+                    <div class="h100 col-xs-6 col-md-4">
+                        <section class="information card">
+                            <section id="options">
+                                <header>
+                                    <h3>Options</h3>
+                                </header>
+                                <div class="content">
+                                    <ul id="form">
+                                        <li>
+                                            <div id="minValue"></div>
+                                            <div id="maxValue"></div>
+                                        </li>
+                                        <li>
+                                            Vertex is labeled ?
+                                            <label>
+                                                <input id="vertexLabeled_true" type="radio" name="vertexlabeled" value="1" checked> True
+                                            </label>
+                                            <label>
+                                                <input id="vertexLabeled_false" type="radio" name="vertexlabeled" value="0"> False
+                                            </label>
+                                        </li>
+                                        <li>
+                                            Edges is labeled ?
+                                            <label>
+                                                <input id="edgeLabeled_true" type="radio" name="edgelabeled" value="1" checked > True
+                                            </label>
+                                            <label>
+                                                <input id="edgeLabeled_false" type="radio" name="edgelabeled" value="0"> False
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>                    
+                            </section>
+                            <section id="legend">
+                                <header>
+                                    <h3>Info</h3>
+                                </header>
+                                <div class="content">
+                                    <ul>
+                                        <li><b>Add node: </b> Click the the editor area.</li>
+                                        <li><b>Add edges: </b> Click the source node and drag until target node.</li>
+                                        <li><b>Drag node: </b> Press key 'Ctrl' + cLick and press node and drag it.</li>
+                                        <li><b>Remove node: </b> Click the node and press key 'delete'.</li>
+                                        <li><b>Remove edge: </b> Click the edge and press key 'delete'.</li>
+                                    </ul>
+                                </div>                    
+                            </section>
+                        </section>        
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
     </body>
 </html>

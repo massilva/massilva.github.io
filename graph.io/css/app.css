@@ -41,7 +41,7 @@ circle.node {
 }
 
 circle.node.reflexive {
-  stroke: #000 !important;
+  /*stroke: #000 !important;*/
   stroke-width: 2.5px;
 }
 
