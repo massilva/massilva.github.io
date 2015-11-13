@@ -13,6 +13,9 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
     _private.edgelabels = [];
     _private.lastKeyDown = -1; // only respond once per keydown
     _private.mouseEvent = {selected_node: null, selected_link: null, mousedown_link: null, mousedown_node: null, mouseup_node: null};
+    _private.distances = {min: [], max: []};
+    _private.algorithm = new Algorithm();
+    _private.isNumericLabel = true;
 
     // update force layout (called automatically each iteration)
     _private.tick = function() {
@@ -58,6 +61,24 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
 
     };
 
+    _private.appendTSpanTo = function(text, string, dx, dy){
+        text.append("tspan")
+            .text(string)
+            .attr("dx",dx)
+            .attr("dy",dy)
+            .attr("text-anchor", "middle");
+    }
+
+    _private.updateLimits = function(node_id, elem_id, min, max){
+        var g = _private.svg.selectAll(elem_id);
+        //remove previous text
+        g.selectAll("text#limit_"+node_id).remove();
+        //add text
+        text = g.append('svg:text').attr('id', 'limit_'+node_id).attr("class","limits");
+        _private.appendTSpanTo(text,"MAX: "+max,"0","-3em");
+        _private.appendTSpanTo(text,"MIN: "+min,"-45","1.2em");
+    }
+
     // update graph (called when needed)
     _private.restart = function(){
 
@@ -87,8 +108,18 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                 _private.restart();
             });
 
+        if(uForm.min_max_path == 1 && _private.isNumericLabel && _private.mouseEvent.mousedown_node && _private.mouseEvent.mouseup_node && _private.links.length){
+            _private.distances.min = _private.algorithm.shortestPath(_private.nodes, _private.links, 0);
+            _private.distances.max = _private.algorithm.longestPath(_private.nodes, _private.links, 0);
+            _private.updateLimits(_private.mouseEvent.mousedown_node.id, "g#g"+_private.mouseEvent.mousedown_node.id, _private.distances.min[_private.mouseEvent.mousedown_node.id], _private.distances.max[_private.mouseEvent.mousedown_node.id]);
+            _private.updateLimits(_private.mouseEvent.mouseup_node.id, "g#g"+_private.mouseEvent.mouseup_node.id, _private.distances.min[_private.mouseEvent.mouseup_node.id], _private.distances.max[_private.mouseEvent.mouseup_node.id]);
+        }
+
         // remove old links
         _private.path.exit().remove();
+
+        _private.distances.min[_private.nodes.length] = Infinity;
+        _private.distances.max[_private.nodes.length] = -1;
 
         // circle (node) group
         // NB: the function arg is crucial here! nodes are known by id, not by index!
@@ -101,7 +132,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                 .classed('reflexive', function(d) { return d.reflexive; });
 
         // add new nodes
-        var g = _private.circle.enter().append('svg:g');
+        var g = _private.circle.enter().append('svg:g').attr("id",function(d) { return "g"+d.id });
 
         g.append('svg:circle')
             .attr('class', 'node')
@@ -165,11 +196,12 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                 if(link) {
                     link[direction] = true;
                 } else {
-                    var edgeIsLabeled = uForm.edgelabeled == '1';
                     var label = " ";
-                    if(edgeIsLabeled){
+                    if(uForm.edgelabeled == 1){
                         label = prompt("Set the edge label","");
                     }
+                    //after first false the labels is not numerics.
+                    _private.isNumericLabel = _private.isNumericLabel && _private.isNumeric(label);
                     link = {source: source, target: target, left: false, right: false, value: _private.isNumeric(label) ? parseFloat(label) : label};
                     link[direction] = true;
                     _private.links.push(link);
@@ -177,7 +209,6 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                     _private.restart();
                 }
 
-                console.log(_private.links);
                 // select new link
                 _private.mouseEvent.selected_link = link;
                 _private.mouseEvent.selected_node = null;
@@ -247,9 +278,8 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
         if(d3.event.ctrlKey || _private.mouseEvent.mousedown_node || _private.mouseEvent.mousedown_link) return;
 
         // insert new node at point
-        var vertexIsLabeled = uForm.vertexlabeled == '1';
         var label = "";
-        if(vertexIsLabeled){
+        if(uForm.vertexlabeled == 1){
             label = prompt("Set the vertex label","");
         }
         label = label || _private.lastIdx + 1;

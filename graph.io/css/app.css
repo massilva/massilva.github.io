@@ -54,3 +54,7 @@ text.id {
   text-anchor: middle;
   font-weight: bold;
 }
+
+text.limits{
+  fill: #F90;
+}
