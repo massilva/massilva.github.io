@@ -194,7 +194,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                 })[0];
 
                 if(link) {
-                    link[direction] = true;
+                    link[direction] = uForm.vertexDirected == 1;
                 } else {
                     var label = " ";
                     if(uForm.edgelabeled == 1){
@@ -203,7 +203,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                     //after first false the labels is not numerics.
                     _private.isNumericLabel = _private.isNumericLabel && _private.isNumeric(label);
                     link = {source: source, target: target, left: false, right: false, value: _private.isNumeric(label) ? parseFloat(label) : label};
-                    link[direction] = true;
+                    link[direction] = uForm.vertexDirected == 1;
                     _private.links.push(link);
                     _private.updateEdge();
                     _private.restart();

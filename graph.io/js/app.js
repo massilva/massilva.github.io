@@ -11,7 +11,9 @@ $(document).ready(function(){
     for(var i = uForm.length - 1; i >= 0; --i){
         uForm[i].onchange = onChange;
         var input = $(uForm[i]);
-        form[input.attr("name")] = input.val();
+        if(input.is(":checked")){
+            form[input.attr("name")] = input.val();
+        }
     }
 
     function onChange(){

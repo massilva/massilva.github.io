@@ -28,36 +28,39 @@
             <header id="header-site">
                 <div class="description_header">
                     <div id="slogan-header-site">Make feel yourself confortable to conect the dots.</div>
-                    <div id="legend-slogan">Graph.io provides the tools and you put your creativity and interpretation.</div>
+                    <div id="legend-slogan">Graph.io provides the tool and you put your creativity and interpretation.</div>
                 </div>
                 <hr class="connect">
-                <div class="no-margin samples row">
-                      <div class="col-xs-6 col-md-4">
-                        <div class="card">
+                <div class="h90 no-margin samples row">
+                    <div class="h90 col-xs-6 col-md-4">
+                        <div class="h90 card">
                             <div class="title separator">Project Management - PERT</div>
                             <img height="220" src="images/use-example1.png" alt="Use example 1">
                             <div class="footer separator">
-                                <strong>Program evaluation and review technique</strong> was designed to analyze and represent the tasks involved in completing a given project.
+                                <strong>PERT</strong> was designed to analyze and represent the tasks involved in completing a given project.
                                 It is commonly used in conjunction with the critical path method (CPM).<br/> 
                                 <i class="fa fa-exclamation-circle info-color"></i> 
                                 The option "<strong><i>Show maximum and minimum values</i></strong>" will help you to see the CPM.
                             </div>
                         </div>
-                      </div>
-                      <div class="col-xs-6 col-md-4">
-                        <div class="card">
-                            <div class="title">Sample 1</div>
+                    </div>
+                    <div class="h90 col-xs-6 col-md-4">
+                        <div class="h90 card">
+                            <div class="title">Topological Structure</div>
                             <img height="250" src="images/use-example1.png" alt="Use example 1">
-                            <div class="description">[description]</div>
+                            <div class="footer separator">
+                                Create your friends network. <br/>
+                                <i class="fa fa-exclamation-circle info-color"></i> 
+                                Select the option "<strong><i>The nodes are labeled</i></strong>" to True and the others to False.
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-xs-6 col-md-4">
-                        <div class="card">
+                    </div>
+                    <div class="h90 col-xs-6 col-md-4">
+                        <div class="h90 card">
                             <div class="title">Sample 2</div>
                             <img height="250" src="images/use-example1.png" alt="Use example 1">
                             <div class="description">[description]</div>
                         </div>
-                      </div>
                     </div>
                 </div>
             </header>
@@ -76,34 +79,39 @@
                                 <div class="content">
                                     <ul id="form">
                                         <li>
-                                            <div id="minValue"></div>
-                                            <div id="maxValue"></div>
-                                        </li>
-                                        <li>
-                                            <p>Vertex is labeled ?</p>
+                                            <p>The nodes are labeled ?</p>
                                             <label>
-                                                <input id="vertexLabeled_true" type="radio" name="vertexlabeled" value="1" checked> True
+                                                <input type="radio" name="vertexlabeled" value="1"> True
                                             </label>
                                             <label>
-                                                <input id="vertexLabeled_false" type="radio" name="vertexlabeled" value="0"> False
+                                                <input type="radio" name="vertexlabeled" value="0" checked> False
                                             </label>
                                         </li>
                                         <li>
-                                            <p>Edges is labeled ?</p>
+                                            <p>The edges are labeled ?</p>
                                             <label>
-                                                <input id="edgeLabeled_true" type="radio" name="edgelabeled" value="1" checked > True
+                                                <input type="radio" name="edgelabeled" value="1"> True
                                             </label>
                                             <label>
-                                                <input id="edgeLabeled_false" type="radio" name="edgelabeled" value="0"> False
+                                                <input type="radio" name="edgelabeled" value="0" checked> False
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <p>The edges are directed ?</p>
+                                            <label>
+                                                <input type="radio" name="vertexDirected" value="1"> True
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="vertexDirected" value="0" checked> False
                                             </label>
                                         </li>
                                         <li>
                                             <p>Show maximal and minimal values path until the node ?</p>
                                             <label>
-                                                <input type="radio" name="min_max_path" value="1" checked > True
+                                                <input type="radio" name="min_max_path" value="1"> True
                                             </label>
                                             <label>
-                                                <input type="radio" name="min_max_path" value="0"> False
+                                                <input type="radio" name="min_max_path" value="0" checked> False
                                             </label>
                                         </li>
                                     </ul>
