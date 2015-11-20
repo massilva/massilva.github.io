@@ -179,16 +179,9 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
 
                 // add link to graph (update if exists)
                 // NB: links are strictly source < target; arrows separately specified by booleans
-                var source, target, direction;
-                if(_private.mouseEvent.mousedown_node.id > _private.mouseEvent.mouseup_node.id) {
-                    source = _private.mouseEvent.mouseup_node;
-                    target = _private.mouseEvent.mousedown_node;
-                    direction = 'left';
-                } else {
-                    source = _private.mouseEvent.mousedown_node;
-                    target = _private.mouseEvent.mouseup_node;
-                    direction = 'right';
-                }
+                var source, target, direction = 'right';
+                source = _private.mouseEvent.mousedown_node;
+                target = _private.mouseEvent.mouseup_node;
 
                 var link = _private.links.filter(function(l) {
                     return (l.source === source && l.target === target);
@@ -216,6 +209,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                     _private.distances.max = _private.algorithm.longestPath(_private.nodes, _private.graph, 0);
                     _private.showLimit(source.id, "g#g"+source.id, _private.distances.min[source.id], _private.distances.max[source.id]);
                     _private.updateLimitsPath(_private.graph[link.source.id]);
+                    console.log(link.source.id + " ---> " + link.target.id);
                 }
 
                 // select new link
