@@ -16,6 +16,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
     _private.distances = {min: [], max: []};
     _private.algorithm = new Algorithm();
     _private.isNumericLabel = true;
+    _private.graph = [];
 
     // update force layout (called automatically each iteration)
     _private.tick = function() {
@@ -67,17 +68,24 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
             .attr("dx",dx)
             .attr("dy",dy)
             .attr("text-anchor", "middle");
-    }
+    };
 
-    _private.updateLimits = function(node_id, elem_id, min, max){
+    _private.showLimit = function(node_id, elem_id, min, max){
         var g = _private.svg.selectAll(elem_id);
         //remove previous text
         g.selectAll("text#limit_"+node_id).remove();
         //add text
         text = g.append('svg:text').attr('id', 'limit_'+node_id).attr("class","limits");
-        _private.appendTSpanTo(text,"MAX: "+max,"0","-3em");
-        _private.appendTSpanTo(text,"MIN: "+min,"-45","1.2em");
-    }
+        _private.appendTSpanTo(text,"MAX: " + (max == -1 ? "--" : max),"0","-3em");
+        _private.appendTSpanTo(text,"MIN: " + (min == Infinity ? "--" : min),"-45","1.2em");
+    };
+
+    _private.updateLimitsPath = function(target){
+        for(var i = target.length - 1; i >= 0; --i){
+            _private.showLimit(target[i].target, "g#g"+target[i].target, _private.distances.min[target[i].target], _private.distances.max[target[i].target]);
+            _private.updateLimitsPath(_private.graph[target[i].target]);
+        }
+    };
 
     // update graph (called when needed)
     _private.restart = function(){
@@ -107,13 +115,6 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                 _private.mouseEvent.selected_node = null;
                 _private.restart();
             });
-
-        if(uForm.min_max_path == 1 && _private.isNumericLabel && _private.mouseEvent.mousedown_node && _private.mouseEvent.mouseup_node && _private.links.length){
-            _private.distances.min = _private.algorithm.shortestPath(_private.nodes, _private.links, 0);
-            _private.distances.max = _private.algorithm.longestPath(_private.nodes, _private.links, 0);
-            _private.updateLimits(_private.mouseEvent.mousedown_node.id, "g#g"+_private.mouseEvent.mousedown_node.id, _private.distances.min[_private.mouseEvent.mousedown_node.id], _private.distances.max[_private.mouseEvent.mousedown_node.id]);
-            _private.updateLimits(_private.mouseEvent.mouseup_node.id, "g#g"+_private.mouseEvent.mouseup_node.id, _private.distances.min[_private.mouseEvent.mouseup_node.id], _private.distances.max[_private.mouseEvent.mouseup_node.id]);
-        }
 
         // remove old links
         _private.path.exit().remove();
@@ -206,7 +207,15 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
                     link[direction] = uForm.vertexDirected == 1;
                     _private.links.push(link);
                     _private.updateEdge();
-                    _private.restart();
+                    //Graph in array notation
+                    _private.graph[link.source.id].push({target: link.target.id, value: link.value});
+                }
+
+                if(uForm.min_max_path == 1 && _private.isNumericLabel){
+                    _private.distances.min = _private.algorithm.shortestPath(_private.nodes, _private.graph, 0);
+                    _private.distances.max = _private.algorithm.longestPath(_private.nodes, _private.graph, 0);
+                    _private.showLimit(source.id, "g#g"+source.id, _private.distances.min[source.id], _private.distances.max[source.id]);
+                    _private.updateLimitsPath(_private.graph[link.source.id]);
                 }
 
                 // select new link
@@ -285,7 +294,7 @@ var SimpleGraph = function(window, content_id, width, height, uForm){
         label = label || _private.lastIdx + 1;
         var point = d3.mouse(this);
         var node = {id: _private.lastIdx++, name: label, reflexive: true, x: point[0], y: point[1]};
-
+        _private.graph[node.id] = [];
         _private.nodes.push(node);
         _private.restart();
 
