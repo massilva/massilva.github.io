@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <script src="../javascripts/googleanalytics.js" type="text/javascript"></script>
     <script src="../javascripts/d3.v3.min.js"></script>
     <script src="../javascripts/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -26,43 +27,129 @@
         </nav>
         <section class="site">
             <header id="header-site">
-                <div class="description_header">
+                <div class="description_header h15">
                     <div id="slogan-header-site">Make feel yourself confortable to conect the dots.</div>
                     <div id="legend-slogan">Graph.io provides the tool and you put your creativity and interpretation.</div>
                 </div>
                 <hr class="connect">
-                <div class="h90 no-margin samples row">
-                    <div class="h90 col-xs-6 col-md-4">
-                        <div class="h90 card">
-                            <div class="title separator">Project Management - PERT</div>
-                            <img height="220" src="images/use-example1.png" alt="Use example 1">
-                            <div class="footer separator">
-                                <strong>PERT</strong> was designed to analyze and represent the tasks involved in completing a given project.
-                                It is commonly used in conjunction with the critical path method (CPM).<br/> 
-                                <i class="fa fa-exclamation-circle info-color"></i> 
-                                The option "<strong><i>Show maximum and minimum values</i></strong>" will help you to see the CPM.
+                <div class="h51 no-margin samples row">
+                    <div class="col-xs-6 col-md-4">
+                        <div class="card">
+                            <div class="title">Project Management - PERT</div>
+                            <img height="160" src="images/use-example1.png" alt="Use example 1">
+                            <div class="footer">
+                                Graph.io can to be used to see the critical path.<br/> 
+                                <i class="fa fa-question-circle info-color"></i> 
+                                Select the options "<strong><i>The edges are directed; The edges are labeled; Show maximum and minimum values</i></strong>" for True.
                             </div>
                         </div>
                     </div>
-                    <div class="h90 col-xs-6 col-md-4">
-                        <div class="h90 card">
+                    <div class="col-xs-6 col-md-4">
+                        <div class="card">
                             <div class="title">Topological Structure</div>
-                            <img height="250" src="images/use-example1.png" alt="Use example 1">
-                            <div class="footer separator">
+                            <img height="160" src="images/use-example1.png" alt="Use example 1">
+                            <div class="footer">
                                 Create your friends network. <br/>
-                                <i class="fa fa-exclamation-circle info-color"></i> 
-                                Select the option "<strong><i>The nodes are labeled</i></strong>" to True and the others to False.
+                                <i class="fa fa-question-circle info-color"></i> 
+                                Select the option "<strong><i>The nodes are labeled</i></strong>" to True and the others options to False.
                             </div>
                         </div>
                     </div>
-                    <div class="h90 col-xs-6 col-md-4">
-                        <div class="h90 card">
-                            <div class="title">Sample 2</div>
-                            <img height="250" src="images/use-example1.png" alt="Use example 1">
-                            <div class="description">[description]</div>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="card">
+                            <div class="title">Network Structure</div>
+                            <svg width="300px" height="160px">
+                                <path fill="#1EB287">
+                                    <animate 
+                                         attributeName="d" 
+                                         dur="3000ms" 
+                                         repeatCount="indefinite"
+                                         keyTimes="0;
+                                                   .0625;
+                                                   .208333333;
+                                                   .3125;
+                                                   .395833333;
+                                                   .645833333;
+                                                   .833333333;
+                                                   1"
+                                         calcMode="spline" 
+                                         keySplines="0,0,1,1;
+                                                     .42,0,.58,1;
+                                                     .42,0,1,1;
+                                                     0,0,.58,1;
+                                                     .42,0,.58,1;
+                                                     .42,0,.58,1;
+                                                     .42,0,.58,1"
+                                         values="M 0,0 
+                                                 C 50,0 50,0 100,0
+                                                 100,50 100,50 100,100
+                                                 50,100 50,100 0,100
+                                                 0,50 0,50 0,0
+                                                 Z;
+
+                                                 M 0,0 
+                                                 C 50,0 50,0 100,0
+                                                 100,50 100,50 100,100
+                                                 50,100 50,100 0,100
+                                                 0,50 0,50 0,0
+                                                 Z;
+
+                                                 M 50,0 
+                                                 C 75,25 75,25 100,50 
+                                                 75,75 75,75 50,100
+                                                 25,75 25,75 0,50
+                                                 25,25 25,25 50,0
+                                                 Z;
+
+                                                 M 25,50 
+                                                 C 37.5,25 37.5,25 50,0 
+                                                 75,50 75,50 100,100
+                                                 50,100 50,100 0,100
+                                                 12.5,75 12.5,75 25,50
+                                                 Z;
+
+                                                 M 25,50 
+                                                 C 37.5,25 37.5,25 50,0 
+                                                 75,50 75,50 100,100
+                                                 50,100 50,100 0,100
+                                                 12.5,75 12.5,75 25,50
+                                                 Z;
+
+                                                 M 50,0
+                                                 C 77.6,0 100,22.4 100,50 
+                                                 100,77.6 77.6,100 50,100
+                                                 22.4,100, 0,77.6, 0,50
+                                                 0,22.4, 22.4,0, 50,0
+                                                 Z;
+                                                 
+                                                 M 50,0
+                                                 C 77.6,0 100,22.4 100,50 
+                                                 100,77.6 77.6,100 50,100
+                                                 22.4,100, 0,77.6, 0,50
+                                                 0,22.4, 22.4,0, 50,0
+                                                 Z;
+                                                 
+                                                 M 100,0 
+                                                 C 100,50 100,50 100,100
+                                                 50,100 50,100 0,100
+                                                 0,50 0,50 0,0
+                                                 50,0 50,0 100,0
+                                                 Z;"/>
+                                    </animate>
+                                </path>
+                            </svg>
+                            <div class="footer">
+                                Simulate the network structure<br/>
+                                <i class="fa fa-question-circle info-color"></i> 
+                                Select the option "<strong><i>The nodes are labeled</i></strong>" to True and the others options to False.
+                            </div>
                         </div>
                     </div>
                 </div>
+                <hr class="connect">
+                <footer id="footer_header" class="h20">
+                    <p>But you can just have <span class="smile_animate">fun</span></p>
+                </footer>
             </header>
             <div class="container content full-screen">
                 <div class="row h100">
@@ -79,7 +166,7 @@
                                 <div class="content">
                                     <ul id="form">
                                         <li>
-                                            <p>The nodes are labeled ?</p>
+                                            <p>1. The nodes are labeled ?</p>
                                             <label>
                                                 <input type="radio" name="vertexlabeled" value="1"> True
                                             </label>
@@ -88,7 +175,7 @@
                                             </label>
                                         </li>
                                         <li>
-                                            <p>The edges are labeled ?</p>
+                                            <p>2. The edges are labeled ?</p>
                                             <label>
                                                 <input type="radio" name="edgelabeled" value="1"> True
                                             </label>
@@ -97,7 +184,7 @@
                                             </label>
                                         </li>
                                         <li>
-                                            <p>The edges are directed ?</p>
+                                            <p>3. The edges are directed ?</p>
                                             <label>
                                                 <input type="radio" name="vertexDirected" value="1"> True
                                             </label>
@@ -106,7 +193,7 @@
                                             </label>
                                         </li>
                                         <li>
-                                            <p>Show maximal and minimal values path until the node ?</p>
+                                            <p>4. Show maximal and minimal values path until the node ?</p>
                                             <label>
                                                 <input type="radio" name="min_max_path" value="1"> True
                                             </label>
