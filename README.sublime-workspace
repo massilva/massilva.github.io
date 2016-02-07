@@ -1,0 +1,967 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"updateLim",
+				"updateLimitsPath"
+			],
+			[
+				"isNumeric",
+				"isNumbericLabel"
+			],
+			[
+				"wi",
+				"width	Style CSS"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"distan",
+				"distances	algorithm.js"
+			],
+			[
+				"dista",
+				"distances	algorithm.js"
+			],
+			[
+				"v_s",
+				"v_source	algorithm.js"
+			],
+			[
+				"new_",
+				"new_v_target	algorithm.js"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"on",
+				"onchange	Attr"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"_",
+				"_private"
+			],
+			[
+				"le",
+				"length	String"
+			],
+			[
+				"bin",
+				"ng-bind-html	AngularJS"
+			],
+			[
+				"ng-b",
+				"ng-bind-html	AngularJS"
+			],
+			[
+				"ng-",
+				"ng-bind	AngularJS"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"rege",
+				"regex_br"
+			],
+			[
+				"regex",
+				"regex_paragrafo"
+			],
+			[
+				"eg",
+				"edgesU"
+			],
+			[
+				"mkGraphA",
+				"mkGraphListaAdjacencia"
+			],
+			[
+				"C",
+				"Concurrency"
+			],
+			[
+				"Ma",
+				"Maths"
+			],
+			[
+				"gra",
+				"gray"
+			],
+			[
+				"max",
+				"maxRadius"
+			],
+			[
+				"min",
+				"minimo"
+			],
+			[
+				"dese",
+				"desempenho	controllers.js"
+			],
+			[
+				"quest",
+				"questoes	controllers.js"
+			],
+			[
+				"getQ",
+				"getQuestions()	question.js"
+			],
+			[
+				"compl",
+				"complementos"
+			],
+			[
+				"que",
+				"questao"
+			],
+			[
+				"Questa",
+				"Questao_Prova_id"
+			],
+			[
+				"Disci",
+				"Disciplina_nome"
+			],
+			[
+				"Assunt",
+				"Assunto_id"
+			],
+			[
+				"Questao",
+				"Questao_has_Assunto"
+			],
+			[
+				"Discip",
+				"Disciplina_id"
+			],
+			[
+				"discip",
+				"disciplina_nome"
+			],
+			[
+				"disc",
+				"disciplina_nome"
+			],
+			[
+				"disci",
+				"Disciplina"
+			],
+			[
+				"Ques",
+				"Questao_has_Assunto"
+			],
+			[
+				"Que",
+				"Questao_numero"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
+				"A",
+				"Alternativa"
+			],
+			[
+				"Questao_",
+				"Questao_has_Assunto"
+			],
+			[
+				"disciplina",
+				"disciplina_id"
+			],
+			[
+				"Dese",
+				"desempenhoPorMateria	controllers.js"
+			],
+			[
+				"desempenho",
+				"desempenhoDisciplina	controllers.js"
+			],
+			[
+				"desemep",
+				"desempenhoDisciplina	controllers.js"
+			],
+			[
+				"desempen",
+				"desempenhoDisciplina	controllers.js"
+			],
+			[
+				"desem",
+				"desempenhoPorMateria	controllers.js"
+			],
+			[
+				"ims",
+				"imshow"
+			],
+			[
+				"it",
+				"iterations"
+			],
+			[
+				"fl",
+				"flood"
+			],
+			[
+				"floo",
+				"flooded"
+			],
+			[
+				"erode",
+				"erode2"
+			],
+			[
+				"flo",
+				"flood"
+			],
+			[
+				"im",
+				"imgray"
+			],
+			[
+				"cv",
+				"cvtColor"
+			],
+			[
+				"gray",
+				"gray_blur"
+			],
+			[
+				"thre",
+				"thresh"
+			],
+			[
+				"chart",
+				"chartBra	controllers.js"
+			],
+			[
+				"cl",
+				"closing"
+			],
+			[
+				"sure",
+				"sure_bg"
+			],
+			[
+				"src",
+				"src_img"
+			],
+			[
+				"out",
+				"out_img"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"dist",
+				"dist_mat"
+			],
+			[
+				"seg",
+				"seg_img"
+			],
+			[
+				"com",
+				"complemento"
+			],
+			[
+				"obj",
+				"objView	services.js"
+			],
+			[
+				"q",
+				"questoes"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"th",
+				"th5"
+			],
+			[
+				"consoleL",
+				"consoleLog(type)	angular.js"
+			],
+			[
+				"ga",
+				"gray"
+			],
+			[
+				"re",
+				"ret3"
+			],
+			[
+				"thr",
+				"thresh"
+			],
+			[
+				"Houg",
+				"Hough"
+			],
+			[
+				"d",
+				"dilate"
+			],
+			[
+				"path",
+				"path_base"
+			],
+			[
+				"pat",
+				"path_base"
+			],
+			[
+				"img",
+				"imgPath"
+			],
+			[
+				"arg",
+				"argc"
+			],
+			[
+				"_p3",
+				"_p3y	cronometro.html"
+			],
+			[
+				"_p2",
+				"_p2y	cronometro.html"
+			],
+			[
+				"getElement",
+				"getElementById('aSome')"
+			],
+			[
+				"onc",
+				"onclick	Attr"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"io",
+				"ion-item"
+			],
+			[
+				"value",
+				"value	Attr"
+			],
+			[
+				"input",
+				"inputt	input - text"
+			],
+			[
+				"Prova",
+				"Prova_model"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"addCl",
+				"addClass( value )	jquery.js"
+			],
+			[
+				"arra",
+				"array1	slide.html"
+			],
+			[
+				"function",
+				"functions(object)	functions.js"
+			],
+			[
+				"int",
+				"intBuffer"
+			],
+			[
+				"for",
+				"for	for"
+			],
+			[
+				"du",
+				"dummy3"
+			],
+			[
+				"dumm",
+				"dummy1"
+			],
+			[
+				"file",
+				"fileChannel"
+			],
+			[
+				"setMax",
+				"setMaxListeners(n)	bluebird.js"
+			],
+			[
+				"less",
+				"less_src"
+			],
+			[
+				"mini",
+				"minifyCss"
+			],
+			[
+				"map",
+				"mapT"
+			],
+			[
+				"o",
+				"otherwise"
+			],
+			[
+				"aj",
+				"adjacent"
+			],
+			[
+				"g",
+				"getMatching2"
+			],
+			[
+				"PR",
+				"PRINT_IPL"
+			],
+			[
+				"bas",
+				"base2"
+			],
+			[
+				"pri",
+				"PRINT_IPL"
+			],
+			[
+				"cvCreateIma",
+				"cvCreateImage"
+			],
+			[
+				"i",
+				"integrais"
+			],
+			[
+				"con",
+				"continue"
+			],
+			[
+				"I",
+				"INT_MAX"
+			],
+			[
+				"ang",
+				"angMin"
+			],
+			[
+				"de",
+				"define"
+			],
+			[
+				"s",
+				"size"
+			],
+			[
+				"vi",
+				"visitado"
+			],
+			[
+				"se",
+				"second"
+			],
+			[
+				"cH",
+				"cChild"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 138.0,
+		"last_filter": "Package Control: in",
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/massilva/Downloads/Mastering JavaScript Design Patterns/ReadMe.txt",
+		"/home/massilva/Imagens/sample_picture_blocos/sample_picture_blocos.pgm",
+		"/var/www/html/CG/index.html",
+		"/var/www/html/CG/marcos/trabalho1/index.html",
+		"/var/www/html/CG/marcos/trabalho2/index.html",
+		"/home/massilva/AndroidStudioProjects/biometricid/app/src/main/java/br/ufba/dcc/biometricid/persistence/UtilDAO.java",
+		"/home/massilva/AndroidStudioProjects/biometricid/app/src/main/java/br/ufba/dcc/biometricid/view/activity/test/GalleryActivity.java",
+		"/home/massilva/AndroidStudioProjects/biometricid/app/src/main/java/br/ufba/dcc/biometricid/business/Analyzer.java",
+		"/home/massilva/AndroidStudioProjects/biometricid/app/src/main/java/br/ufba/dcc/biometricid/model/Util.java",
+		"/home/massilva/NetBeansProjects/biometricidws/test_image.pgm",
+		"/home/massilva/NetBeansProjects/biometricidws/test_image_out.j2k",
+		"/home/massilva/NetBeansProjects/biometricidws/c0p0_01.pgx",
+		"/home/massilva/NetBeansProjects/biometricidws/test_image_out.jp2",
+		"/var/www/html/projetos/miserables.json",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/js/SimpleGraph.js",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/js/app.js",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/css/style.css",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/index.html",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/js/algorithm.js",
+		"/var/www/html/CG/marcos/trabalho2/application.js",
+		"/home/massilva/Documentos/CG/ArlindoEMarcos/index.html",
+		"/home/massilva/Documentos/CG/Arlindo_Marcos/trabalho1/index.html",
+		"/var/log/apache2/error.log",
+		"/var/log/apache2/ls",
+		"/etc/apache2/apache2.conf",
+		"/home/massilva/Documentos/CG/application.js",
+		"/home/massilva/Downloads/artigo-sibgrabi/example.tex",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/css/checkbox.css",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/css/app.css",
+		"/home/massilva/Downloads/smile.svg",
+		"/home/massilva/Documentos/projetos/massilva.github.io/index.html",
+		"/home/massilva/Documentos/projetos/massilva.github.io/javascripts/googleanalytics.js",
+		"/home/massilva/Documentos/projetos/massilva.github.io/game/js/app.js",
+		"/home/massilva/Documentos/projetos/massilva.github.io/game/craftyjs.html",
+		"/home/massilva/Documentos/projetos/massilva.github.io/game/createjs.html",
+		"/home/massilva/Documentos/projetos/massilva.github.io/game/index.html",
+		"/home/massilva/Documentos/projetos/massilva.github.io/game/css/style.css",
+		"/home/massilva/Downloads/crafty.js",
+		"/home/massilva/Downloads/fun.svg",
+		"/home/massilva/Downloads/f.svg",
+		"/home/massilva/Documentos/projetos/massilva.github.io/game/js/crafty-min.js",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/js/controllers.js",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/js/services.js",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/questionario/tab-questionario-por-materia.html",
+		"/home/massilva/Dropbox/Aulas/2015.1/Topicos em Computação e Algoritmos/Marcos/nRainhas2.hs",
+		"/home/massilva/Dropbox/Aulas/2015.1/Topicos em Computação e Algoritmos/Victor/funRainhas.hs",
+		"/home/massilva/Dropbox/Aulas/2015.1/Topicos em Computação e Algoritmos/Marcos/nRainhas.hs",
+		"/home/massilva/Dropbox/Aulas/2015.1/Topicos em Computação e Algoritmos/Victor/funRainhas",
+		"/var/www/html/freela/passei/servico/application/models/Prova_model.php",
+		"/var/www/html/freela/passei/servico/application/controllers/Prova_rest.php",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/js/bootstrap-modal.js",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/js/bootstrap-modalmanager.js",
+		"/var/www/html/projetos/index.html",
+		"/var/www/html/index.html",
+		"/home/massilva/Dropbox/Maratona/Assuntos/Dijkstra.cpp",
+		"/home/massilva/Dropbox/Maratona/spoj/pontes09.cpp",
+		"/home/massilva/Dropbox/Maratona/spoj/parque.cpp",
+		"/home/massilva/Documentos/projetos/massilva.github.io/graph.io/index2.html",
+		"/var/www/html/projetos/stylesheet/style.css",
+		"/home/massilva/AndroidStudioProjects/biometricid/app/src/main/AndroidManifest.xml",
+		"/home/massilva/AndroidStudioProjects/biometricid/app/src/main/java/br/ufba/dcc/biometricid/webservice/WebServiceController.java",
+		"/home/massilva/.bashrc",
+		"/home/massilva/WebstormProjects/passei-bahiana/ionic.project",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/questionario/tab-questionario-por-assunto.html",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/questionario/tab-questionario-por-ano.html",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/css/style.css",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/js/app.js",
+		"/var/www/html/freela/passei/servico/application/config/database.php",
+		"/var/www/html/freela/passei/servico/application/libraries/REST_Controller.php",
+		"/home/massilva/Dropbox/CV/code/main.py",
+		"/home/massilva/Dropbox/Aulas/2015.1/Topicos em Computação e Algoritmos/Apresentacao/main.hs",
+		"/home/massilva/Dropbox/Aulas/2015.1/Topicos em Computação e Algoritmos/Apresentacao/PQueue/Min.hs",
+		"/home/massilva/Dropbox/Aulas/2015.1/Topicos em Computação e Algoritmos/Apresentacao/observe.hs",
+		"/home/massilva/Dropbox/CV/code/run.sh",
+		"/home/massilva/Dropbox/CV/code/a.out",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/tab-prova-assunto.html",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/estatistica/tab-prova-por-assunto.html",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/estatistica/tab-prova-por-ano.html",
+		"/var/www/html/freela/passei/servico/application/config/rest.php",
+		"/var/www/html/freela/passei/servico/application/config/config.php",
+		"/var/www/html/freela/passei/servico/system/core/Config.php",
+		"/var/www/html/freela/passei/servico/system/core/CodeIgniter.php",
+		"/home/massilva/Downloads/config/config/database.php",
+		"/home/massilva/Downloads/config/config/autoload.php",
+		"/home/massilva/Downloads/config/config/config.php",
+		"/home/massilva/Downloads/config/config/constants.php",
+		"/home/massilva/Downloads/config/config/doctypes.php",
+		"/home/massilva/Downloads/config/config/foreign_chars.php",
+		"/home/massilva/Downloads/config/config/hooks.php",
+		"/home/massilva/Downloads/config/config/index.html",
+		"/home/massilva/Downloads/config/config/memcached.php",
+		"/home/massilva/Downloads/config/config/migration.php",
+		"/home/massilva/Downloads/config/config/mimes.php",
+		"/home/massilva/Downloads/config/config/profiler.php",
+		"/home/massilva/Downloads/config/config/rest.php",
+		"/home/massilva/Downloads/config/config/routes.php",
+		"/home/massilva/Downloads/config/config/smileys.php",
+		"/home/massilva/Downloads/config/config/user_agents.php",
+		"/var/www/html/freela/passei/servico/application/config/routes.php",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/js/model/question.js",
+		"/etc/hosts",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/js/functions.js",
+		"/home/massilva/Documents/texto.txt",
+		"/home/massilva/WebstormProjects/passei-bahiana/config.xml",
+		"/home/massilva/WebstormProjects/passei-bahiana/.io-config.json",
+		"/home/massilva/Dropbox/CV/code/contourfeatures.py",
+		"/home/massilva/Dropbox/CV/code/flood.py",
+		"/home/massilva/WebstormProjects/passei-bahiana/.gitignore",
+		"/home/massilva/Documentos/projetos/localhackday/hsQuiz/www/js/services.js",
+		"/home/massilva/Documentos/projetos/localhackday/hsQuiz/www/js/controllers.js",
+		"/home/massilva/Documentos/projetos/localhackday/hsQuiz/www/js/app.js",
+		"/home/massilva/Documentos/projetos/localhackday/hsQuiz/www/index.html",
+		"/home/massilva/Documentos/projetos/localhackday/hsQuiz/www/templates/question.html",
+		"/home/massilva/Documentos/projetos/localhackday/hsQuiz/www/css/style.css",
+		"/home/massilva/Downloads/flip-1.0.16/demo/flip-with-swipebox/index.html",
+		"/home/massilva/Downloads/flip-1.0.16/demo/flip-with-swipebox/style.css",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/index.html",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/tab-prova-materia.html",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/welcome.html",
+		"/home/massilva/Documentos/projetos/localhackday/hsQuiz/www/lib/ionic-material/ionic.material.css",
+		"/home/massilva/WebstormProjects/passei-bahiana/www/templates/tab-prova.html",
+		"/home/massilva/Documentos/projetos/localhackday/index.html",
+		"/home/massilva/Documentos/projetos/localhackday/js/model/judges.js",
+		"/home/massilva/Documentos/projetos/localhackday/js/model/util.js",
+		"/home/massilva/Documentos/projetos/localhackday/js/model/urijudge.js",
+		"/home/massilva/Documentos/projetos/localhackday/uri.js",
+		"/home/massilva/Dropbox/CV/code/LaneMarkers.py",
+		"/home/massilva/WebstormProjects/passei-bahiana/bower_components/normalize.css/README.md"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/massilva/WebstormProjects/passei-bahiana/www",
+			"/home/massilva/WebstormProjects/passei-bahiana/www/js",
+			"/var/www/html/freela/passei/servico",
+			"/var/www/html/freela/passei/app",
+			"/var/www/html/freela/passei/app/www/css",
+			"/var/www/html/freela/passei/app"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cid I/System.out:",
+			"setSourceName",
+			"setBlockImagePath",
+			"getB",
+			"getPat",
+			"getPat'",
+			"case",
+			"'u'",
+			"'u",
+			"initTexture",
+			"onReadComplete",
+			"g_objDoc",
+			"mono",
+			"init",
+			" ",
+			" height=\"200\"",
+			"squaredFour",
+			"                                            <p>\n",
+			"input type=\"checkbox",
+			"value=\"1\" ",
+			"radio",
+			"160",
+			"row-h70",
+			"h50",
+			" checked",
+			"card",
+			"height=\"160",
+			"h100",
+			"h90",
+			"        ",
+			"\">\n",
+			"f90",
+			"subjectObject",
+			"target",
+			"circle",
+			"Circle",
+			"circle",
+			"initSceneObjects",
+			"subject",
+			"Crafty.timer.step(",
+			"webkitImageSmoothingEnabled",
+			"fa-exclamation",
+			"circle",
+			"h70",
+			"h90",
+			" height=\"250\"",
+			"height=\"220\"",
+			"showLimit",
+			"console.log(",
+			"vertex",
+			"_private.graph",
+			"graph",
+			"updateLimitsPath",
+			", updatedList",
+			"updateLimitsPath",
+			"updateLimitsPath(",
+			", updatedList",
+			"		putStrLn(\"\")",
+			"6",
+			"5",
+			"3",
+			"as 8",
+			"PorMat",
+			"->limit($numero-1,1)",
+			"get_rest_",
+			"get_rest_prova",
+			"http://servico.passeibahiana.com.br/",
+			"prova_rest",
+			"http://servico.passeibahiana.com.br/prova_rest",
+			"http://servico.passeibahiana.com.br/",
+			"servico.",
+			"http://servico.passeibahiana.com.br/",
+			"updateLimit(",
+			".updateLimit",
+			"].id",
+			"console.log",
+			"_private.links",
+			"nodes",
+			"links",
+			"updateLimits",
+			"_private.mouseEvent.mouseup_node",
+			"_private.mouseEvent.mousedown_node",
+			"value=\"0\"",
+			"h100",
+			"[title]",
+			"edown",
+			"_mousedown_node",
+			"l(id)",
+			"add",
+			"edown",
+			"selectAll",
+			"uForm",
+			"value=\"true\"",
+			"uFo",
+			"if(uF",
+			"value=\"0\"",
+			"value=\"1\"",
+			"circle",
+			"public.dijkstra",
+			"comparator",
+			"#333",
+			".header-site",
+			"#information",
+			"d.y",
+			"+ 1",
+			"stroke",
+			"add",
+			"div",
+			"background",
+			"star-light",
+			"em",
+			"subject",
+			"section",
+			"Brand",
+			"ue\":",
+			"e\":",
+			"_private.",
+			"vertex",
+			"}",
+			"},",
+			"nodes[",
+			",\"",
+			",",
+			"0,",
+			"++",
+			"add new",
+			"add",
+			"console"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			","
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 26.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "README.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 278.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
