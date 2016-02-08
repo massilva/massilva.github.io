@@ -1,1 +1,0 @@
-var Westeros = Westeros || {};Westeros.Structures = Westeros.Structures || {};Westeros.Structures.Castle = function(name){ this.name = name}; //constructorWesteros.Structures.Castle.prototype.Build = function(){console.log("Castle built: " +  this.name)};var winterfell = new Westeros.Structures.Castle(“Winterfell”);winterfell.Build();
