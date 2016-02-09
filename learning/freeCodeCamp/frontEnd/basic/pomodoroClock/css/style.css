@@ -14,6 +14,10 @@ button.session-timer{
   border: 1px solid #ff9900;
 }
 
+span.value-time, button.session-timer span{
+  font-weight: bold;
+}
+
 .center{
   display: table;
   margin: 0 auto;

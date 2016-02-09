@@ -25,7 +25,7 @@
                         <h4 class="text-center">Break Time</h4>
                         <div class="center">
                             <button class="minus" onclick="operation('break-time','-');">-</button>
-                            <span id="break-time" class="value-time"></span>
+                            <span id="break-time" class="value-time">05</span>
                             <button class="plus" onclick="operation('break-time','+');">+</button>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                         <h4 class="text-center">Session Time</h4>
                         <div class="center">
                             <button class="minus" onclick="operation('session-time','-');">-</button>
-                            <span id="session-time" class="value-time"></span>
+                            <span id="session-time" class="value-time">25</span>
                             <button class="plus" onclick="operation('session-time','+');">+</button>
                         </div>
                     </div>
@@ -41,19 +41,14 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <button id="timer" class="session-timer center">
-                            <span id="hour">00</span>:<span id="min">25</span>:<span id="sec">00</span>
+                            <span id="hour"></span>:<span id="min"></span>:<span id="sec"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row mg-tiny">
-                    <div class="col-xs-6">
+                    <div class="col-xs-12">
                         <div class="text-center">
-                            <button class="btn btn-danger btn-lg">Stop</button>
-                        </div>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="text-center">
-                            <button class="btn btn-default btn-lg">Reset</button>
+                            <button id="reset-timer" class="btn btn-default btn-lg">Reset</button>
                         </div>
                     </div>
                 </div>
