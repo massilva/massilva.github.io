@@ -1,0 +1,35 @@
+button.minus, button.plus{
+  border: none;
+  color: #FF9900;
+}
+
+button.minus, button.plus, button.session-timer{
+  background: #FFF;
+}
+
+button.session-timer{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #ff9900;
+}
+
+.center{
+  display: table;
+  margin: 0 auto;
+}
+
+.mg-larger {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.mg-middle{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mg-tiny{
+  margin-top: 1rem;
+  margin-bottom: 1rem;  
+}
