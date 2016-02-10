@@ -1,89 +1,121 @@
 (function(){
+
     $(document).ready(function(){
+
+        var timerIntervalID, breakIntervalID;
+        var sessionStarted = false, breakStarted = false;
         var timer = $("#timer");
         var breakTime = $("#break-time");
         var sessionTime = $("#session-time");
-        var sessionStarted = false;
-        var timerIntervalID;
+
+        $("body").append('<audio id="audio"></audio>');
+        $("#audio").attr("src","audio/evacuation.mp3");
+
+        var audio = $("#audio")[0];
         var timerTime = {hour: timer.find("#hour"), min: timer.find("#min"), sec: timer.find("#sec")};
-
-        //setting default value
-        if(breakTime.html() === "")
-            breakTime.html("05");
-
-        if(sessionTime.html() === "")
-            sessionTime.html("25");
-
-        var resetValues = function(){
-            var min = sessionTime.html();
-            timerTime.hour.html(formatTime(parseInt(min / 60)));
-            timerTime.min.html(min % 60);
-            timerTime.sec.html("00");
-            clearInterval(timerIntervalID);
-        };
-
-        resetValues();
 
         //button action
         timer.on("click",function(){
-            if(!sessionStarted){
-                timerIntervalID = setInterval(function(){
-                    timerUpdate();
-                },1000);
-            }else{
-                clearInterval(timerIntervalID);        
+            if(!breakStarted){
+                if(!sessionStarted){
+                    sessionInterval();
+                }else{
+                    sessionTimeResertValues();     
+                }
+                sessionStarted = !sessionStarted;                
             }
-            sessionStarted = !sessionStarted;
         });
 
-        $("#reset-timer").on("click", resetValues);
+        var resetValues = function(id){
+            var min = $(id).val();
+            timerTime.sec.html("00");
+            timerTime.min.html(formatTime(min % 60));
+            timerTime.hour.html(formatTime(parseInt(min / 60)));
+            clearInterval(timerIntervalID);
+            clearInterval(breakIntervalID);
+        };
 
-        function timerUpdate(){
-            var sec = timerTime.sec.html() - 1;
+        $("#reset-timer").on("click", sessionTimeResertValues());
+        sessionTimeResertValues();
+
+        var operation = function(id, op){
+            id = "#"+id;
+            var value = parseInt($(id).val());
+            switch(op){
+                case '+':
+                    value++; 
+                    break;
+                case '-':
+                    value--;
+                    break;
+            }
+            if(value <= 0){ 
+                value = 1;
+            }
+            $(id).val(formatTime(value));
+            resetValues(id);
+        };
+
+        function sessionTimeResertValues(){
+            resetValues("#session-time");
+        }
+
+        function formatTime(value){
+            return value < 10 ? value = "0".concat(value) : value;
+        }
+
+        function timerUpdate(sec){
+            timerTime.sec.html(formatTime(sec < 0 ? 59 : sec));
             if(sec < 0){
-                sec = 59;
-                minUpdate();
+                minUpdate(timerTime.min.html() - 1);
             }
-            timerTime.sec.html(formatTime(sec));
         }
 
-        function minUpdate(){
-            var min = timerTime.min.html() - 1;
+        function minUpdate(min){
+            timerTime.min.html(formatTime(min < 0 ? 59 : min));
             if(min < 0){
-                min = 59;
-                hourUpdate();
+                hourUpdate(timerTime.hour.html()-1);
             }
-            timerTime.min.html(formatTime(min));
         }
 
-        function hourUpdate(){
-            var hour = timerTime.hour.html() - 1;
-            if(hour < 0){
-                clearInterval(timerIntervalID);
+        function hourUpdate(hour){
+            if(hour >= 0){
+               timerTime.hour.html(formatTime(hour));
+            } else {
+                if(!breakStarted){
+                    audio.loop = true;
+                    audio.play();
+                    breakInterval();
+                } else {
+                    audio.pause();
+                    sessionInterval();
+                }
             }
-            timerTime.hour.html(formatTime(hour));
         }
 
+        function breakInterval(){
+            clearInterval(timerIntervalID);
+            timerIntervalID = undefined;
+            breakStarted = true;
+            sessionStarted = false;
+            resetValues("#break-time");
+            breakIntervalID = setInterval(function(){
+                timerUpdate(timerTime.sec.html() - 1);    
+            },1000);
+        }
+
+        function sessionInterval(){
+            clearInterval(breakIntervalID);
+            breakIntervalID = undefined;
+            breakStarted = false;
+            sessionStarted = true;
+            sessionTimeResertValues();
+            timerIntervalID = setInterval(function(){
+                timerUpdate(timerTime.sec.html() - 1);
+            },1000);
+        }
+        window.operation = operation;
+        window.resetValues = resetValues;
     });
-    var formatTime = function(value){
-        return value < 10 ? value = "0".concat(value) : value;
-    }
-    var operation = function(id, op){
-        id = "#"+id;
-        var value = parseInt($(id).html());
-        switch(op){
-            case '+':
-                value++; 
-                break;
-            case '-':
-                value--;
-                break;
-        }
-        if(value <= 0){ 
-            value = 1;
-        }
-        $(id).html(formartTime(value));
-    };
-    window.operation = operation;
-    window.formatTime = formatTime;
+
 })();

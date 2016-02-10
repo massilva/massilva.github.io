@@ -14,6 +14,12 @@ button.session-timer{
   border: 1px solid #ff9900;
 }
 
+button.session-timer:visited,
+button.session-timer:active{
+  background: #ff9900;
+  color: #FFF;
+}
+
 span.value-time, button.session-timer span{
   font-weight: bold;
 }

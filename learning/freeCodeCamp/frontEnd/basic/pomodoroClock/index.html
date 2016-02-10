@@ -25,7 +25,7 @@
                         <h4 class="text-center">Break Time</h4>
                         <div class="center">
                             <button class="minus" onclick="operation('break-time','-');">-</button>
-                            <span id="break-time" class="value-time">05</span>
+                            <input id="break-time" class="value-time text-center" type="number" min="1" max="30" value="5">
                             <button class="plus" onclick="operation('break-time','+');">+</button>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                         <h4 class="text-center">Session Time</h4>
                         <div class="center">
                             <button class="minus" onclick="operation('session-time','-');">-</button>
-                            <span id="session-time" class="value-time">25</span>
+                            <input id="session-time" class="value-time text-center" type="number" min="1" max="60" value="25" onchange="resetValues('#session-time');">
                             <button class="plus" onclick="operation('session-time','+');">+</button>
                         </div>
                     </div>
