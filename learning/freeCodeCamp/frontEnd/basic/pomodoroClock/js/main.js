@@ -13,8 +13,6 @@
             timerTime.sec.html("00");
             timerTime.min.html(formatTime(min % 60));
             timerTime.hour.html(formatTime(parseInt(min / 60)));
-            clearInterval(timerIntervalID);
-            clearInterval(breakIntervalID);
         };
 
         //Add audio
@@ -76,6 +74,8 @@
             $(id).val(formatTime(value));
             if(reset){
                 resetValues(id);
+                clearInterval(timerIntervalID);
+                clearInterval(breakIntervalID);
             }
         };
 
