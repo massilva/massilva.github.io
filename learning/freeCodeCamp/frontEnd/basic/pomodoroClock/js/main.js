@@ -54,7 +54,7 @@
             operation('session-time','+',true);
         });
 
-        $("#reset-timer").on("click", sessionTimeResertValues());
+        $("#reset-timer").on("click",sessionTimeResertValues);
         //finished buttons action
 
         sessionTimeResertValues();
