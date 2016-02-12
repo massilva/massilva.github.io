@@ -20,6 +20,10 @@ button.session-timer:active{
   color: #FFF;
 }
 
+button.session-timer:focus{
+  outline: none;
+}
+
 span.value-time, button.session-timer span{
   font-weight: bold;
 }
