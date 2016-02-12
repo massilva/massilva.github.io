@@ -24,17 +24,17 @@
                     <div class="col-xs-6">
                         <h4 class="text-center">Break Time</h4>
                         <div class="center">
-                            <button class="minus" onclick="operation('break-time','-');">-</button>
+                            <button id="bt-minus" class="minus">-</button>
                             <input id="break-time" class="value-time text-center" type="number" min="1" max="30" value="5">
-                            <button class="plus" onclick="operation('break-time','+');">+</button>
+                            <button id="bt-plus" class="plus">+</button>
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <h4 class="text-center">Session Time</h4>
                         <div class="center">
-                            <button class="minus" onclick="operation('session-time','-');">-</button>
+                            <button id="st-minus" class="minus">-</button>
                             <input id="session-time" class="value-time text-center" type="number" min="1" max="60" value="25" onchange="resetValues('#session-time');">
-                            <button class="plus" onclick="operation('session-time','+');">+</button>
+                            <button id="st-plus" class="plus">+</button>
                         </div>
                     </div>
                 </div>
