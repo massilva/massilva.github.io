@@ -1,0 +1,21 @@
+.center{
+  display: table;
+  margin: 0 auto;
+}
+
+.content{
+  padding: 45px 15px 15px;
+}
+
+#panel div[class^='col']{
+  padding: 0;
+}
+
+.larger{
+  height: 60px;
+  padding: 2rem;
+}
+
+#display input{
+  letter-spacing: 4px;
+}
