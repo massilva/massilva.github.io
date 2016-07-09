@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(to bottom, #68A05C, #003700);
+}
+p{
+    font-family: Orbitron, sans-serif;
+    color: white;
+    font-size: 24pt;
+}
+.container{
+    flex-direction: column;
+}
+.container,.row{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.row{
+    border-bottom: 5px inset rgba(0, 55, 0, 0.5);
+}
+.row:last-child{
+    border-bottom: none;
+}
+path {
+    stroke-linecap: round;
+}
+a,
+a:visited{
+    text-decoration: none;
+    color: blue;
+}
