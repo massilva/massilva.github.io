@@ -781,6 +781,7 @@ function handleKeyDown(event) {
         case "V":
             cameraSelecionada = "voadora";
             rotZ = 0, rotY = 0, rotX = 0;
+            transX = 1;
             break;
 
         case "T":
@@ -800,6 +801,7 @@ function handleKeyDown(event) {
 
         case 27 :   // ESC
             transX = transY = transZ = 0;
+            rotX = rotY = rotZ = 0;
             initCameras();
             break;
 
