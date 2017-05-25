@@ -1,7 +1,7 @@
 /*global $, document, jQuery */
 $(document).ready(function (jQuery) {
     'use strict';
-    var commands, cmd_list, helpCommandsList, terminalName, skills, resume, name, from;
+    var commands, cmd_list, helpCommandsList, terminalName, skills, resume, name, from, social;
 
     terminalName = '[[ib;blue;black]\
     \n::::    ::::      :::     :::::::::   ::::::::   ::::::::   ::::::::  ::: \
@@ -35,9 +35,18 @@ $(document).ready(function (jQuery) {
 
     from = 'Salvador/Bahia - Brazil';
 
+    social = [
+        '[[b;yellow;black]github]: "http://github.com/massilva",',
+        '[[b;yellow;black]linkedin]: "https://br.linkedin.com/in/massilva"'
+    ];
+
     commands = {
         clear: {
             description: 'Clear the terminal screen'
+        },
+        fromami: {
+            description: 'From I am',
+            content: from
         },
         guim: {
             description: 'GUI mode',
@@ -73,9 +82,9 @@ $(document).ready(function (jQuery) {
             description: 'List of Skills',
             content: skills.join('\n')
         },
-        whereami: {
-            description: 'Where I am',
-            content: from
+        social: {
+            description: 'Social informations',
+            content: social.join('\n')
         },
         whoami: {
             description: 'About me',
@@ -83,7 +92,10 @@ $(document).ready(function (jQuery) {
                 \n\t[[b;yellow;black]name]: "' + name + '",\
                 \n\t[[b;yellow;black]resume]: "' + resume + '",\
                 \n\t[[b;yellow;black]from]: "' + from + '",\
-                \n\t[[b;yellow;black]skills]:{\
+                \n\t[[b;yellow;black]social]: {\
+                \n\t\t' + social.join('\n\t\t') + '\
+                \n\t},\
+                \n\t[[b;yellow;black]skills]: {\
                 \n\t\t' + skills.join('\n\t\t') + '\
                 \n\t}\
                 \n[[b;white;black]}]'
